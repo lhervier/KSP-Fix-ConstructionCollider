@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
 
@@ -17,7 +18,9 @@ namespace com.github.lhervier.ksp.fix.constructioncollider
         private void Start()
         {
             Settings.Load();
-            Log.Info($"Version {typeof(KSPFixConstructionCollider).Assembly.GetName().Version}, " +
+            string version = typeof(KSPFixConstructionCollider).Assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
+            Log.Info($"Version {version}, " +
                 $"releasedPartCollides {Settings.ReleasedPartCollides}, log level {Log.Level}");
             if (!Settings.ReleasedPartCollides)
             {
