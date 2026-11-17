@@ -3,7 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>KSPFixConstructionCollider</AssemblyName>
     <RootNamespace>com.github.lhervier.ksp.fix.constructioncollider</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>0.1.0-dev</Version>
     <Description>Keeps a part edited in EVA construction mode from staying a trigger once released, after a switch between the Move and Rotate tools</Description>
     <!-- Straight into the folder that gets copied to the GameData of KSP. -->
     <OutputPath>GameData\KSPFixConstructionCollider</OutputPath>
